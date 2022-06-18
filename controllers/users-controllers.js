@@ -6,7 +6,7 @@ const HttpError = require("../models/http-error");
 const DUMMY_USERS = [
   {
     id: "u1",
-    name: "spencer",
+    name: "Spencer",
     email: "test@test.com",
     password: "spencer123",
   },
