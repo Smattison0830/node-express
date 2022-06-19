@@ -15,6 +15,7 @@
     "dotenv": "^16.0.1",
     "express": "^4.17.1",
     "express-validator": "^6.2.0",
+    "mongoose": "^6.4.0",
     "uuid": "^3.3.3"
   },
   "devDependencies": {
