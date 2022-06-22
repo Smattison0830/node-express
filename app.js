@@ -1,5 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+require("dotenv").config();
 
 const placesRoutes = require("./routes/places-routes");
 const usersRoutes = require("./routes/users-routes");
@@ -25,4 +27,11 @@ app.use((error, req, res, next) => {
   res.json({ message: error.message || "An unknown error occurred!" });
 });
 
-app.listen(5001);
+mongoose
+  .connect(`mongodb+srv://${process.env.CREDENTIALS}`)
+  .then(() => {
+    app.listen(5001);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
